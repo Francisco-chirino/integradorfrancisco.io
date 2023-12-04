@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>MATESITO</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<div class="container-hero">
+				<div class="container hero">
+					<div class="container-logo">
+						<a href="index.html">
+							<img src="img/matesito-1-removebg-preview-1.png" alt="Logo de Matesito">
+						</a>
+						<h1 class="logo"><a href="index.html">MATESITO</a></h1>
+					</div>
+					<div class="customer-support">
+						<i class="fa-solid fa-headset"></i>
+						<div class="content-customer-support">
+							<span class="text">Atencion al cliente</span>
+							<span class="number">2645131959</span>
+						</div>
+					</div>
+
+					
+
+					<div class="container-user">
+						<i class="fa-solid fa-user"></i>
+						<i class="fa-solid fa-basket-shopping"></i>
+						<div class="content-shopping-cart">
+							<span class="text">Carrito</span>
+							<span class="number">(0)</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-navbar">
+				<nav class="navbar container">
+					<i class="fa-solid fa-bars"></i>
+					<ul class="menu">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="productos.html">Mates</a></li>
+						<li><a href="#">Bombillas</a></li>
+						<li><a href="#">Personalizados</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+
+					<form class="search-form">
+						<input type="search" placeholder="Buscar..." />
+						<button class="btn-search">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
+				</nav>
+			</div>
+		</header>
+
+		<section class="carrusel">
+			<div class="carrusel">
+				<button class="carrusel-boton carrusel-boton-anterior" onclick="cambiarImagen(-1)">&#10094;</button>
+				<div class="carrusel-item">
+					<img src="img/sanjuanina-1.png" alt="Imagen 1">
+				</div>
+
+				<div class="carrusel-item">
+					<img src="img/a3b58725-cb35-4b62-b17d-35895417d67f.png" alt="Imagen 3">
+				</div>
+				<button class="carrusel-boton carrusel-boton-siguiente" onclick="cambiarImagen(1)">&#10095;</button>
+			</div>
+		</section>
+		
+		<script>
+			let indiceImagen = 0;
+		
+			function cambiarImagen(n) {
+				const imagenes = document.querySelectorAll('.carrusel-item');
+				indiceImagen += n;
+		
+				if (indiceImagen > imagenes.length - 1) {
+					indiceImagen = 0;
+				} else if (indiceImagen < 0) {
+					indiceImagen = imagenes.length - 1;
+				}
+		
+				const desplazamiento = -indiceImagen * 100 + '%';
+				document.querySelector('.carrusel').style.transform = 'translateX(' + desplazamiento + ')';
+			}
+		</script>
+		<main class="main-content">
+			<section class="container container-features">
+				<div class="card-feature">
+					<i class="fa-solid fa-plane-up"></i>
+					<div class="feature-content">
+						<span>Envío gratuito a nivel mundial</span>
+						<p>En pedido superior a $150</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-wallet"></i>
+					<div class="feature-content">
+						<span>Contrareembolso</span>
+						<p>100% garantía de devolución de dinero</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-gift"></i>
+					<div class="feature-content">
+						<span>Tarjeta regalo especial</span>
+						<p>Ofrece bonos especiales con regalo</p>
+					</div>
+				</div>
+				<div class="card-feature">
+					<i class="fa-solid fa-headset"></i>
+					<div class="feature-content">
+						<span>Servicio al cliente 24/7</span>
+						<p>LLámenos 24/7 al 2641231231</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="container top-categories">
+				<h1 class="heading-1">Mejores Categorías</h1>
+				<div class="container-categories">
+					<div class="card-category category-moca">
+						<p>Mates Premium</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-expreso">
+						<p>Mates Personalizados</p>
+						<span>Ver más</span>
+					</div>
+					<div class="card-category category-capuchino">
+						<li><a href="productos.html">Nuestros Productos </a></li>
+
+						<span>Ver más</span>
+					</div>
+				</div>
+			</section>
+
+			<section class="container top-products">
+				<h1 class="heading-1">Mejores Productos</h1>
+
+				<div class="container-options">
+					<span class="active">Destacados</span>
+				</div>
+
+				<div class="container-products">
+					<!-- Producto 1 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img src="img/dise-o-sin-t-tulo-6-removebg-preview-1.png" alt="imperial" />
+							<span class="discount">-13%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Mate Viajero</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$4.60 <span>$5.30</span></p>
+						</div>
+					</div>
+					<!-- Producto 2 -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/dise-o-sin-t-tulo-1-removebg-preview-1.png"
+								alt="MMate uruguayo"
+							/>
+							<span class="discount">-22%</span>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+								<i class="fa-regular fa-star"></i>
+							</div>
+							<h3>Mate Uruguayo</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$5.70 <span>$7.30</span></p>
+						</div>
+					</div>
+					<!--  -->
+					<div class="card-product">
+						<div class="container-img">
+							<img
+								src="img/a75f30734d0ecaf4d534060cc6507952021e2982e91d5ed8f54c4dfc75060103136089-removebg-preview (1).png"
+								alt="Messi"
+							/>
+							<div class="button-group">
+								<span>
+									<i class="fa-regular fa-eye"></i>
+								</span>
+								<span>
+									<i class="fa-regular fa-heart"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-code-compare"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-card-product">
+							<div class="stars">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+							</div>
+							<h3>Mate Imperial</h3>
+							<span class="add-cart">
+								<i class="fa-solid fa-basket-shopping"></i>
+							</span>
+							<p class="price">$3.20</p>
+						</div>
+					</div>
+					
+			</section>
+
+			
+
+			<section class="container blogs">
+				<h1 class="heading-1">Últimos Blogs</h1>
+
+				<div class="container-blogs">
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/981538de8773be1a9ff1d3829ab9798042c090d59485ea3ddf9b154de9156cba171970.png" alt="Imagen Blog 1" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>"La Armonía entre Tradición y Modernidad"</h3>
+							<span>10 Noviembre 2022</span>
+							<p>
+								Los mates personalizados representan una fusión única entre la tradición del mate y la modernidad al permitir la expresión individual a través de diseños y mensajes personalizados. Más allá de su atractivo estético, estos mates se convierten en elementos de conversación, conectando la rica herencia cultural del mate con la creatividad contemporánea. La personalización no solo añade un toque distintivo, sino que también contribuye a la preservación y promoción de esta práctica centenaria, asegurando su relevancia en la era actual. En resumen, los mates personalizados son símbolos vibrantes de armonía cultural y expresión personal.
+							</p>
+							<button class="btn-read-more" onclick="abrirModal(1)">Leer más</button>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/0ca20842ef3701f5e6dfc4975a33eac6c041c0cb4161d76df16268ca9b2af6c526737.jpeg" alt="Imagen Blog 2" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Porque tomar mate es bueno</h3>
+							<span>20 Noviembre 2023</span>
+							<p>
+								Tomar mate es beneficioso para la salud debido a sus propiedades antioxidantes, vitaminas y minerales. La infusión de yerba mate ofrece un impulso de energía sostenible y mejora la concentración. Además, se ha asociado con la reducción del riesgo de enfermedades cardiovasculares y la mejora de la digestión. Su contenido de compuestos bioactivos también puede ayudar a fortalecer el sistema inmunológico. En resumen, el mate no solo es una tradición cultural, sino una opción saludable que aporta bienestar general.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+					<div class="card-blog">
+						<div class="container-img">
+							<img src="img/3c298d2bb95fe43f5a63eab0b08bab0f.jpg" alt="Imagen Blog 3" />
+							<div class="button-group-blog">
+								<span>
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</span>
+								<span>
+									<i class="fa-solid fa-link"></i>
+								</span>
+							</div>
+						</div>
+						<div class="content-blog">
+							<h3>Porque es mejor perzonalizado?</h3>
+							<span>29 Noviembre 2023</span>
+							<p>
+								Comprar un mate personalizado añade un toque único y estilizado a tu experiencia de beber mate, permitiéndote expresar tu individualidad. Además de su atractivo estético, los mates personalizados suelen ser duraderos y de alta calidad, lo que garantiza una inversión a largo plazo. Son ideales como regalos significativos, mostrando atención y consideración al personalizar el diseño según los gustos de la persona. En definitiva, un mate personalizado no solo es un objeto funcional, sino una expresión única de estilo y personalidad.
+							</p>
+							<div class="btn-read-more">Leer más</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container container-footer">
+				<div class="menu-footer">
+					<div class="contact-info">
+						<p class="title-footer">Información de Contacto</p>
+						<ul>
+							<li>
+								Dirección: San Juan,capital ig.rosa 2425
+							</li>
+							<li>Teléfono: 26445131959</li>
+							<li>Fax: 55555300</li>
+							<li>EmaiL: matesito@gmail.com</li>
+						</ul>
+						<div class="social-icons">
+							<span class="facebook">
+								<i class="fa-brands fa-facebook-f"></i>
+							</span>
+							<span class="twitter">
+								<i class="fa-brands fa-twitter"></i>
+							</span>
+							<span class="youtube">
+								<i class="fa-brands fa-youtube"></i>
+							</span>
+							<span class="pinterest">
+								<i class="fa-brands fa-pinterest-p"></i>
+							</span>
+							<span class="instagram">
+								<i class="fa-brands fa-instagram"></i>
+							</span>
+						</div>
+					</div>
+
+					<div class="information">
+						<p class="title-footer">Información</p>
+						<ul>
+							<li><a href="#">Acerca de Nosotros</a></li>
+							<li><a href="#">Información Delivery</a></li>
+							<li><a href="#">Politicas de Privacidad</a></li>
+							<li><a href="#">Términos y condiciones</a></li>
+							<li><a href="#">Contactános</a></li>
+						</ul>
+					</div>
+
+					<div class="my-account">
+						<p class="title-footer">Mi cuenta</p>
+
+						<ul>
+							<li><a href="#">Mi cuenta</a></li>
+							<li><a href="#">Historial de ordenes</a></li>
+							<li><a href="#">Lista de deseos</a></li>
+							<li><a href="#">Boletín</a></li>
+							<li><a href="#">Reembolsos</a></li>
+						</ul>
+					</div>
+
+					<div class="newsletter">
+						<p class="title-footer">Boletín informativo</p>
+
+						<div class="content">
+							<p>
+								Suscríbete a nuestros boletines ahora y mantente al
+								día con nuevas colecciones y ofertas exclusivas.
+							</p>
+							<input type="email" placeholder="Ingresa el correo aquí...">
+							<button>Suscríbete</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="copyright">
+					<p>
+						Desarrollado por Francisco Chirino &copy; 2023
+					</p>
+
+					<img src="img/payment.png" alt="Pagos">
+				</div>
+			</div>
+		</footer>
+
+		<script
+		function abrirModal() {
+			// Obtener el modal
+			var modal = document.getElementById("miModal");
+		
+			// Mostrar el modal
+			modal.style.display = "block";
+		  }
+		
+		  function cerrarModal() {
+		function abrirModal() {
+			// Obtener el modal
+			var modal = document.getElementById("miModal");
+		
+			// Mostrar el modal
+			modal.style.display = "block";
+		  }
+		
+		  // Función para cerrar el modal
+		  function cerrarModal() {
+			// Obtener el modal
+			var modal = document.getElementById("miModal");
+		
+			// Ocultar el modal
+			modal.style.display = "none";
+		  }
+		
+			src="https://kit.fontawesome.com/81581fb069.js"
+			crossorigin="anonymous"
+		></script>
+		<div id="miModal" class="modal">
+			<div class="modal-content">
+			  <span class="cerrar" onclick="cerrarModal()">&times;</span>
+	</body>
+	
+</html>
